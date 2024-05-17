@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>데이터 전송 실습</title>
+	</head>
+	<style>
+		table{
+			width:300px;
+			height:450px;
+			text-align:center;
+			
+		}
+		tr,th,td{
+			border:solid 1px black;
+			border-collapse:collapse;
+		}
+	</style>
+	<body>
+		<table>
+			<tr>
+				<th>상품명</th>
+				<th>가격</th>
+				<th>수량</th>
+			</tr>
+			<tr>
+				<td>컴퓨터</td>
+				<td>1000000</td>
+				<td>
+					<form>
+					<select>
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>스마트폰</td>
+				<td>1500000</td>
+				<td><form><select>
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select></form>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" rowspan="3">결제 총액<br>sum
+				<form>
+				<input type="submit" value="결제하기">
+				</form>
+				</td>
+			</tr>
+		</table>
+		<script>
+
+		</script>
+	</body>
+</html>
