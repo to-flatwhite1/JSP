@@ -1,8 +1,0 @@
-window.onload=function(){
-	let select=document.getElementById("select");
-	console.log(select);
-	
-}
-//window: 브라우저의 동작을 관할하는 객체
-//window.onload : 여기 들어간 함수는 
-//					화면을 다 그린 뒤 실행 됨

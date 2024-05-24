@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>산책어때</title>
+		<style>
+		#logo{
+			text-align:center;
+		}
+		#login{
+		display:inline-block;
+		float:right;
+		}
+		</style>
+	</head>
+	<body>
+	<div id=wrap>
+		<header>
+			<div id="logo">
+				<h1>산책 어때</h1>
+				<hr>
+			</div>
+		</header>
+		<form method="get" id=login action="next.jsp">
+			<input type=submit value="로그인"><!-- submit action을 취할 수 있다. -->
+		</form>
+		
+	</div>
+	</body>
+</html>
