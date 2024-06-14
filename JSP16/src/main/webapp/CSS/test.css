@@ -1,0 +1,42 @@
+@charset "UTF-8";
+*{
+	margin:0;
+	padding:0;
+}
+#wrap{
+	width:600px;
+	/*height:100px;*/
+	border:10px solid gray;
+	margin:0 auto;
+}
+#header{
+	background-color:green;
+	padding:15px;
+}
+#header h1{
+	color:white;
+	text-align:center;
+}
+#header ul{
+	list-style:none;
+	width:400px;
+	margin:0 auto;
+}
+#header ul li{
+	border:1px solid black;
+	width:98px;
+	float:left;
+}
+#header ul:after{/*면적을 유지 시켜 줄수 있는 효과*/
+	content:"";
+	display:block;
+	clear:both;
+}
+li:hover{
+	background:gold;
+	color:white;
+}
+#footer{
+	background-color:pink;
+	padding:15px;
+}

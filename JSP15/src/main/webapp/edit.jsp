@@ -7,6 +7,27 @@
 		<meta charset="utf-8">
 		<title>회원 정보 수정</title>
 	</head>
+	<style>
+		#wrap{
+			margin:0 auto;
+			width:600px;
+			border:10px solid gray;
+			padding:65px;
+			}
+		th,tr,td{
+			border:1px solid gray;
+			}
+		table,td{
+			border-collapse : collapse;
+			}
+		th:nth-child(1){
+			background-color:green;
+		}	
+		span{
+		display:inline-block;
+		width:250px;
+		}
+	</style>
 	<body>
 	<%
 		//정보수정을 하기 위해서는 select를 하고 update를 해줘야 사용자가 진행이 가능하다.
@@ -63,7 +84,7 @@
 			%>			
 							
 					</table>
-				</div>
+				
 			<%
 			
 		}catch(Exception e){
@@ -78,5 +99,19 @@
 			}
 		}
 	%>
+	<form method="post" action="update.jsp">
+		변경하실 회원의 번호를 입력해 주세요 : <input type="text" name="number"><br>
+		<fieldset>
+			<legend>수정사항 입력</legend>
+			<span>회원 아이디 변경</span><input type="text" name="id"><br>
+			<span>회원 비밀번호 변경</span><input type="text" name="pw"><br>
+			<span>회원 이름 변경</span><input type="text" name="nm"><br>
+			<span>회원 이메일 변경</span><input type="text" name="em"><br>
+			<span>회원 연락처 변경</span><input type="text" name="ph"><br>
+			<span>회원 주소 변경</span><input type="text" name="ad"><br>
+		</fieldset> 
+		<input type="submit" value="수정">
+	</form>
+	</div>
 	</body>
 </html>

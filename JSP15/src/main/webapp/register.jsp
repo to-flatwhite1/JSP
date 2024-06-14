@@ -16,7 +16,8 @@
 			String email=request.getParameter("em");
 			String phone=request.getParameter("ph");
 			String address=request.getParameter("ad");
-		
+			
+			//회선을 저장한다.
 			Connection conn=null; 
 			Statement stmt=null; //
 			ResultSet rs=null;
@@ -25,7 +26,7 @@
 			String db_id="root";
 			String db_pw="iotiot";
 			try{
-				Class.forName("com.mysql.cj.jdbc.Driver");
+				Class.forName("com.mysql.cj.jdbc.Driver"); //mysql의 이름 com.mysql.cj.jdbc.Driver
 				conn=DriverManager.getConnection(url,db_id,db_pw);
 				String sql="insert into register(id,pass,name,email,phone,address)values (";
 				sql+="'"+id+"','"+pass+"','"+name+"','"+email+"','"+phone+"','"+address+"');";
@@ -33,7 +34,10 @@
 				stmt.execute(sql);
 				//Statement.execute() :return boolean insert문에 많이 사용
 				//Statement.executeQuery() : return ResultSet select문에 사용
-				//Statement.executeUpdate() : return int update문과 delete문에 사용
+				//Statement.executeUpdate() : return int 
+						//update문과 delete문에 사용
+					
+						
 				response.sendRedirect("member.jsp");
 			}catch(Exception e){
 				System.out.println("접속 중 오류 발생 : "+e);

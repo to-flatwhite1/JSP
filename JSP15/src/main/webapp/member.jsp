@@ -10,9 +10,9 @@
 	<style>
 		#wrap{
 			margin:0 auto;
-			width:600px;
+			width:750px;
 			border:10px solid gray;
-			padding:65px;
+			padding:50px;
 			}
 		th,tr,td{
 			border:1px solid gray;
@@ -53,6 +53,7 @@
 							<th>이메일</th>
 							<th>전화번호</th>
 							<th>주소</th>
+							<th>삭제</th>
 						</tr>
 			<%
 			while(rs.next()){
@@ -72,6 +73,12 @@
 							<td><%=email %></td>
 							<td><%=phone %></td>
 							<td><%=address %></td>
+							<td>
+								<form method="post" action="delete.jsp">
+									<input type="hidden" value="<%=num %>" name="del">
+									<input type="submit" value="삭제">
+								</form> 
+							</td>
 						</tr>
 			<%
 			}
